@@ -11,30 +11,30 @@
 	  </div>
 	
 	
-	  <div class="span3" style="float:right; height:40px; margin-top:20px">
+	  <div class="span3 pull-right" style="height:40px; margin-top:20px">
 		<p style="text-align:right; margin:0px">Due in <strong style="font-size:16px"><%= distance_of_time_in_words_to_now(school.deadline) %></strong></p>
 			
 			<%= link_to school, confirm: 'Are you sure?', method: :delete  do %>
-              <div class="btn btn-mini btn-group rightbutton">
+              <div class="btn btn-mini btn-group pull-right">
 		        <i class="icon-search icon-trash"></i>
 	          </div>
 	        <% end %>
 			     
 
 			<%= link_to edit_school_path(school) do %>
-			  <div class="btn btn-mini btn-group rightbutton">
+			  <div class="btn btn-mini btn-group pull-right">
 		        <i class="icon-search icon-pencil"></i>
 		      </div>
 		    <% end %>
 
 			<%= link_to school.app_url, :target=> "_blank", do %>
-			  <div class="btn btn-mini btn-group rightbutton">
+			  <div class="btn btn-mini btn-group pull-right">
 		        Application
 		      </div>
 		    <% end %>			
 			
 			<%= link_to school.admissions_url, :target=> "_blank", do %>
-			  <div class="btn btn-mini btn-group rightbutton">
+			  <div class="btn btn-mini btn-group pull-right">
 		        Info
 		      </div>
 		    <% end %>			
