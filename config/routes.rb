@@ -1,5 +1,7 @@
 Schoolapplier::Application.routes.draw do
   resources :schools
+  
+  root :to => 'schools#index'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

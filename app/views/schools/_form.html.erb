@@ -33,13 +33,16 @@
   </div>
   <div class="field">
     <%= f.label :deadline %><br />
-    <%= f.date_select :deadline, %>
+    <%= f.date_select :deadline,   {start_year: Time.now.year, 
+									order: [:month, :day, :year]},
+								   {:class => "btn-group btn dropdown-toggle", 
+									:style => "width: 100px"} %>
   </div>
   <div class="field">
     <%= f.label :rank %><br />
     <%= f.number_field :rank %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit 'Add School',:class => "btn btn-group" %>
   </div>
 <% end %>
