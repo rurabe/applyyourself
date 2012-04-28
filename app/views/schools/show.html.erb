@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @school.name %>
+</p>
+
+<p>
+  <b>Program:</b>
+  <%= @school.program %>
+</p>
+
+<p>
+  <b>Admissions url:</b>
+  <%= @school.admissions_url %>
+</p>
+
+<p>
+  <b>App url:</b>
+  <%= @school.app_url %>
+</p>
+
+<p>
+  <b>Deadline:</b>
+  <%= @school.deadline %>
+</p>
+
+<p>
+  <b>Rank:</b>
+  <%= @school.rank %>
+</p>
+
+
+<%= link_to 'Edit', edit_school_path(@school) %> |
+<%= link_to 'Back', schools_path %>

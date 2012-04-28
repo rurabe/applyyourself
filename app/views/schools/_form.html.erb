@@ -1,0 +1,45 @@
+<%= form_for(@school) do |f| %>
+  <% if @school.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@school.errors.count, "error") %> prohibited this school from being saved:</h2>
+
+      <ul>
+      <% @school.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :program %><br />
+    <%= f.text_field :program %>
+  </div>
+  <div class="field">
+    <%= f.label :location %><br />
+    <%= f.text_field :location %>
+  </div>
+  <div class="field">
+    <%= f.label :admissions_url %><br />
+    <%= f.text_field :admissions_url %>
+  </div>
+  <div class="field">
+    <%= f.label :app_url %><br />
+    <%= f.text_field :app_url %>
+  </div>
+  <div class="field">
+    <%= f.label :deadline %><br />
+    <%= f.date_select :deadline, :class => "input-mini" %>
+  </div>
+  <div class="field">
+    <%= f.label :rank %><br />
+    <%= f.number_field :rank %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
