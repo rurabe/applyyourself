@@ -12,8 +12,24 @@
 	
 	
 	  <div class="span3 pull-right" style="height:40px; margin-top:20px">
-		<p style="text-align:right; margin:0px">Due in <strong style="font-size:16px"><%= distance_of_time_in_words_to_now(school.deadline) %></strong></p>
-			
+		<% if school.deadline>Time.now %>
+	        <p style="text-align:right; margin:0px">
+			  Due in 
+		    	<% if school.deadline-14.days>Time.now %>
+			      <strong style="font-size:16px">
+		  	        <%= distance_of_time_in_words_to_now(school.deadline) %>
+			      </strong>
+		    	<% else %>
+				  <strong style="font-size:16px; color:FireBrick">
+		  	        <%= distance_of_time_in_words_to_now(school.deadline) %>
+			      </strong>
+			    <% end %>
+		  </p>
+		<% else %>
+		  <p style="text-align:right; margin:0px; color:FireBrick">
+			  <strong>Deadline passed </strong>
+		  </p>
+		<% end %>	
 			<%= link_to school, confirm: 'Are you sure?', method: :delete  do %>
               <div class="btn btn-mini btn-group pull-right">
 		        <i class="icon-search icon-trash"></i>

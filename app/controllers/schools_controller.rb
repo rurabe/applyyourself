@@ -44,7 +44,7 @@ class SchoolsController < ApplicationController
 
     respond_to do |format|
       if @school.save
-        format.html { redirect_to @school, notice: 'School was successfully created.' }
+        format.html { redirect_to schools_path, notice: 'School was successfully created.' }
         format.json { render json: @school, status: :created, location: @school }
       else
         format.html { render action: "new" }
@@ -76,7 +76,7 @@ class SchoolsController < ApplicationController
     @school.destroy
 
     respond_to do |format|
-      format.html { redirect_to schools_url }
+      format.html { redirect_to schools_path }
       format.json { head :no_content }
     end
   end
