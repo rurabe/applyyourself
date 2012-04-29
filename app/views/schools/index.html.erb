@@ -1,23 +1,23 @@
 <div class="row-fluid">
-
-<h1>My Schools</h1>
-
-<div class="btn btn-small">
-  <%= link_to 'Add a School', new_school_path %>
+  <h1>My Schools</h1>
+  <div class="btn btn-small">
+    <%= link_to 'Add a School', new_school_path %>
+  </div>
 </div>
 
-</div>
 <br>
 
-
+<table id="schools" style="border: 1px solid lightgray; width:100%">
 <% @schools.each do |school| %>
-
-  <div class="row-fluid" style=>
+<%= content_tag_for :tr, school do %>
+<td>
+  
+  <div class="row-fluid">
       <div class="span9">
-	    <div class="pull-left" style="width:20px; height:100%; margin-top">
-		  <div class="center" style="margin-top:12px">
+	    <div class="handle pull-left">
+		  <div style="margin-top:12px">
 			<center>
-		  <i class="icon-search icon-chevron-up blue"></i>
+		  <i class="icon-search icon-chevron-up blue"></i><br>
 	      <i class="icon-search icon-chevron-down blue"></i>
 		  </div>
 			</center>
@@ -78,6 +78,9 @@
       </div>
   </div>
 
-<% end %>
 
+</td>
+  <% end %>
+<% end %>
+</table>
 <br />

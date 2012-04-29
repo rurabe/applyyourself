@@ -1,9 +1,22 @@
 @import "bootstrap";
 @import 'font-awesome';
 
-.center { margin-left:auto;
-		  margin-right:auto;
+.center { 	margin-left:auto;
+		  	margin-right:auto;
 	
 }
 
-.blue {color: #08c}
+.blue { 	color: #08c}
+
+.school { 	margin-top: 5px;
+			margin-bottom: 5px}
+
+
+/* For the sort handles */
+
+.handle { 	width:25px;
+			height:62px;
+			cursor:move;
+			}
+			
+			
