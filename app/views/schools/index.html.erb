@@ -1,11 +1,27 @@
+<div class="row-fluid">
+
 <h1>My Schools</h1>
+
+<div class="btn btn-small">
+  <%= link_to 'Add a School', new_school_path %>
+</div>
+
+</div>
 <br>
 
 
 <% @schools.each do |school| %>
 
-  <div class="row-fluid" style="height:80px">
-      <div class="span9" style="float:left; margin-top:8px">
+  <div class="row-fluid" style=>
+      <div class="span9">
+	    <div class="pull-left" style="width:20px; height:100%; margin-top">
+		  <div class="center" style="margin-top:12px">
+			<center>
+		  <i class="icon-search icon-chevron-up blue"></i>
+	      <i class="icon-search icon-chevron-down blue"></i>
+		  </div>
+			</center>
+		</div>
 		<%= school.rank %>. <h2 style="display: inline"><%= school.name %></h2> <i class="muted"><%=school.location%></i>	<br>	
 	    <h3 style="margin-left: 25px; display:inline"><%= school.program %></h3>
 	    <h4 style="display:inline"> - 
@@ -16,8 +32,7 @@
 		</h4>
 	  </div>
 	
-	
-	  <div class="span3 pull-right" style="height:40px; margin-top:20px">
+	  <div class="span3 offset9" style="margin-top:10px">
 		<% if school.deadline>Time.now %>
 	        <p style="text-align:right; margin:0px">
 			  Due in 
@@ -60,16 +75,9 @@
 		        Info
 		      </div>
 		    <% end %>			
-		</div>
-	</div>
-
+      </div>
+  </div>
 
 <% end %>
-
 
 <br />
-<%= link_to new_school_path do %>
-<div class="btn btn-group">
-  <%= link_to 'Add a School', new_school_path %>
-</div>
-<% end %>
