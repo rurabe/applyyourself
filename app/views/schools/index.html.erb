@@ -6,8 +6,14 @@
 
   <div class="row-fluid" style="height:80px">
       <div class="span9" style="float:left; margin-top:8px">
-		<%= school.rank %>. <h2 style="display: inline"><%= school.name %></h2> <i class="muted"><%=school.location%></i>		
-	    <h3 style="margin-left: 25px"><%= school.program %></h3>
+		<%= school.rank %>. <h2 style="display: inline"><%= school.name %></h2> <i class="muted"><%=school.location%></i>	<br>	
+	    <h3 style="margin-left: 25px; display:inline"><%= school.program %></h3>
+	    <h4 style="display:inline"> - 
+		<i>
+			<%= number_to_currency (school.units.to_i*school.costperunit.to_i+school.fees.to_i), :unit => '$', :delimiter => ",", :precision => 0 %>	
+
+		</i>
+		</h4>
 	  </div>
 	
 	

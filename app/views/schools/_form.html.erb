@@ -12,34 +12,46 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :name %><br />
+    school name<br />
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :program %><br />
+    program name<br />
     <%= f.text_field :program %>
   </div>
   <div class="field">
-    <%= f.label :location %><br />
+    location<br />
     <%= f.text_field :location %>
   </div>
   <div class="field">
-    <%= f.label :admissions_url %><br />
+    admissions website<br />
     <%= f.text_field :admissions_url %>
   </div>
   <div class="field">
-    <%= f.label :app_url %><br />
+    application link<br />
     <%= f.text_field :app_url %>
   </div>
   <div class="field">
-    <%= f.label :deadline %><br />
+    application deadline<br />
     <%= f.date_select :deadline,   {start_year: Time.now.year, 
 									order: [:month, :day, :year]},
 								   {:class => "btn-group btn dropdown-toggle", 
 									:style => "width: 100px"} %>
   </div>
   <div class="field">
-    <%= f.label :rank %><br />
+    class units in program<br />
+    <%= f.number_field :units %>
+  </div>
+  <div class="field">
+    cost per unit<br />
+    <%= f.number_field :costperunit %>
+  </div>
+  <div class="field">
+    other fees<br />
+    <%= f.number_field :fees %>
+  </div>
+  <div class="field">
+    rank<br />
     <%= f.number_field :rank %>
   </div>
   <div class="actions">
