@@ -1,4 +1,12 @@
 Schoolapplier::Application.routes.draw do
+
+  get "users/new"
+
+  root to: 'static#home'
+  
+  match '/signup', to: 'users#new'
+  match '/about', to: 'static#about'
+
   resources :schools
 
 
