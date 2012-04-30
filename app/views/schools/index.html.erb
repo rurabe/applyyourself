@@ -7,13 +7,11 @@
 
 <br>
 
-<table id="schools" style="width:100%">
+<div id="schools" style="width:100%">
 <% @schools.each do |school| %>
-<tr>
-	<td>
+
 <%= content_tag_for :div, school do %>
 
-  
   <div class="row-fluid">
       <div class="span9">
 	    <div class="handle pull-left">
@@ -83,8 +81,7 @@
 
 
   <% end %>
-</td>
-</tr>
+
 <% end %>
 </table>
 <br />
