@@ -26,7 +26,7 @@ class SchoolsController < ApplicationController
   # GET /schools/new
   # GET /schools/new.json
   def new
-    @school = School.new
+    @school = School.new(rank: School.all(:select => :rank).collect(&:rank).max+1)
 
     respond_to do |format|
       format.html # new.html.erb

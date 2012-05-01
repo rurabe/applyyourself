@@ -3,4 +3,6 @@ class School < ActiveRecord::Base
                   :location, :units, :costperunit, :fees
                   
   validates(:name, presence:true)
+  
+
 end
