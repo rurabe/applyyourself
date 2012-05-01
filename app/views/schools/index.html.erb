@@ -7,18 +7,19 @@
 
 <br>
 
-<div id="schools" style="width:100%">
+<div id="schools" style="width:100%" data-update-url="<%=sort_schools_url%>">
 <% @schools.each do |school| %>
 
 <%= content_tag_for :div, school do %>
 
   <div class="row-fluid">
       <div class="span9">
-	    <div class="handle pull-left">
+	    <div class="handle btn-primary disabled pull-left">
 		  <div style="margin-top:12px">
 			<center>
-		  <i class="icon-search icon-chevron-up blue"></i><br>
-	      <i class="icon-search icon-chevron-down blue"></i>
+		  <i class="icon-search icon-chevron-up"></i><br>
+		  <i class="icon-search icon-align-justify"></i><br>
+	      <i class="icon-search icon-chevron-down"></i>
 		  </div>
 			</center>
 		</div>
@@ -51,14 +52,14 @@
 			  <strong>Deadline passed </strong>
 		  </p>
 		<% end %>	
-			<%= link_to school, confirm: 'Are you sure?', method: :delete  do %>
-              <div class="btn btn-mini btn-group pull-right">
+			<%= link_to school, confirm: 'Are you sure?', title: "delete school", method: :delete  do %>
+              <div class="btn btn-mini pull-right">
 		        <i class="icon-search icon-trash"></i>
 	          </div>
 	        <% end %>
 			     
 
-			<%= link_to edit_school_path(school) do %>
+			<%= link_to edit_school_path(school), title: "edit school" do %>
 			  <div class="btn btn-mini btn-group pull-right">
 		        <i class="icon-search icon-pencil"></i>
 		      </div>

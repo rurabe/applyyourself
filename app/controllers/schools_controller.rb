@@ -4,7 +4,7 @@ class SchoolsController < ApplicationController
   
   
   def index
-    @schools = School.all
+    @schools = School.order("rank")
 
     respond_to do |format|
       format.html # index.html.erb
@@ -82,4 +82,16 @@ class SchoolsController < ApplicationController
       format.json { head :no_content }
     end
   end
+  
+
+
+  def sort
+    params[:school].each_with_index do |id, index|
+      School.update_all({rank: index+1}, {id:id})
+    end
+    render nothing:true 
+  end
+  
+  
+  
 end

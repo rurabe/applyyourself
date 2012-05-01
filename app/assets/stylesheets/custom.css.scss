@@ -14,9 +14,13 @@
 
 /* For the sort handles */
 
-.handle { 	width:25px;
+.handle { 	width:20px;
 			height:62px;
+			margin-right:5px;
 			cursor:move;
+			line-height:100%;
+			border-radius: 5px;
+			color:lightsteelblue;
 			}
 			
 			
