@@ -50,10 +50,7 @@
     other fees<br />
     <%= f.number_field :fees %>
   </div>
-  <div class="field">
-    rank<br />
-    <%= f.number_field :rank %>
-  </div>
+    <%= f.hidden_field :rank %>
   <div class="actions">
     <%= f.submit 'Submit',:class => "btn btn-group" %>
   </div>
